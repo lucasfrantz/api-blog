@@ -10,4 +10,6 @@ module.exports = app => {
     .get(usuariosControlador.lista);
 
   app.route('/usuario/:id').delete(middlewaresAutenticacao.bearer, usuariosControlador.deleta);
+
+  app.route('/usuario/logout').get(middlewaresAutenticacao.bearer, usuariosControlador.logout)
 };
